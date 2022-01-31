@@ -1,9 +1,9 @@
 @extends('master')
 
 @section('content')
-<div class="position-relative min-vh-100 d-flex justify-content-center align-items-center bg-light dark:bg-dark py-4 pt-sm-0">
-    <div class="text-center py-4 d-flex flex-column justify-content-center align-items-center">
-        <h1 class="py-5">Add Data</h1>
+<div class="position-relative d-flex justify-content-center align-items-center bg-light dark:bg-dark py-4 pt-sm-0">
+    <div class="text-center d-flex flex-column justify-content-center align-items-center">
+        <h1 class="">Add Data</h1>
         <form action="{{ route('addSupplier') }}" class="text-center" method="post">
             {{ csrf_field() }}
             <div class="mb-3">
