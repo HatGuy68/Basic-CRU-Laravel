@@ -14,12 +14,12 @@ use App\Http\Controllers\SuppliersController;
 |
 */
 
-Route::get('/', function () { return view('welcome'); });
+Route::get('/', [SuppliersController::class, 'showAllSuppliers']);
 
 Route::get('/form', [SuppliersController::class, 'showForm']);
-Route::post('/addSupplierRoute', [SuppliersController::class, 'addSupplier'])->name('addSupplier');
 
-Route::get('/list', [SuppliersController::class, 'showAllSuppliers']);
-Route::get('/list/{supplierID}', [SuppliersController::class, 'showSupplierDetails']);
-Route::get('/list/{supplierID}/edit', [SuppliersController::class, 'showEditForm']);
+Route::get('/supplier/{supplierID}', [SuppliersController::class, 'showSupplierDetails']);
+Route::get('/supplier/{supplierID}/edit', [SuppliersController::class, 'showEditForm']);
+
+Route::post('/addSupplierRoute', [SuppliersController::class, 'addSupplier'])->name('addSupplier');
 Route::post('/editSupplierRoute', [SuppliersController::class, 'editSupplier'])->name('editSupplier');

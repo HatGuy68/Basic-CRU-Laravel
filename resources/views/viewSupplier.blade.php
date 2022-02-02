@@ -23,7 +23,7 @@
             <label name="emp_email_id">Employee Email Id: {{ $supplierData[0]->Employee_Email_Id }}</label>
         </div>
         <div class="mb-3">
-            <a href="/list/{{ $supplierData[0]->id }}/edit" class="btn btn-outline-dark">Edit</a>
+            <a href="/supplier/{{ $supplierData[0]->id }}/edit" class="btn btn-outline-dark">Edit</a>
         </div>
     </div>
 </div>

@@ -25,7 +25,7 @@ class SuppliersController extends Controller
 
         $newSupplier->save();
         
-        return redirect('/');
+        return redirect('/supplier/'.$newSupplier->id);
     }
 
     public function showAllSuppliers(){
@@ -33,7 +33,7 @@ class SuppliersController extends Controller
         $supplier = new Supplier;
         $suppliers = $supplier->getAllSuppliers();
 
-        return view('supplierList', ['suppliers' => $suppliers]);
+        return view('welcome', ['suppliers' => $suppliers]);
     }
 
     public function showSupplierDetails( $supplierID ) {
@@ -55,7 +55,7 @@ class SuppliersController extends Controller
 
         $supplier->save();
         
-        return redirect('/list/'.$request->id);
+        return redirect('/supplier/'.$request->id);
     }
 
     public function showEditForm( $supplierID ) {
